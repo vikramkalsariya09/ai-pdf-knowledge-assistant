@@ -13,6 +13,9 @@ It's fast to write, auto-generates interactive docs (at /docs),
 and validates incoming data for us automatically.
 """
 
+import os
+import shutil
+
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
