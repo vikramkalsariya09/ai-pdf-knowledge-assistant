@@ -1,5 +1,12 @@
 # 📄 AI PDF Knowledge Assistant (RAG Chatbot)
 
+🔗 **Live Demo:** https://ai-pdf-knowledge-assistant-hjfw8sxthceckmqemzxwex.streamlit.app
+🔗 **Backend API Docs:** https://ai-pdf-knowledge-assistant-vmd3.onrender.com/docs
+
+> Note: The backend is hosted on Render's free tier, which sleeps after
+> 15 minutes of inactivity. The first request after a period of inactivity
+> may take 30-50 seconds to respond while the server wakes up.
+
 A beginner-friendly RAG (Retrieval-Augmented Generation) chatbot that lets you
 upload a PDF and ask questions about its content. Answers are grounded in the
 actual document — not the LLM's general knowledge — and every answer shows
