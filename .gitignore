@@ -1,0 +1,27 @@
+# NEVER commit these — they contain secrets or are unnecessary
+
+# Secret keys — CRITICAL, never push this
+.env
+
+# Virtual environment (too large, and machine-specific)
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# ChromaDB data and uploaded PDFs (user-specific data, not code)
+storage/chroma_db/*
+storage/uploaded_pdfs/*
+!storage/chroma_db/.gitkeep
+!storage/uploaded_pdfs/.gitkeep
+
+# OS-specific junk files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
