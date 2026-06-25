@@ -13,10 +13,8 @@ It's fast to write, auto-generates interactive docs (at /docs),
 and validates incoming data for us automatically.
 """
 
-import os
-import shutil
-
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from backend.config import settings
@@ -28,6 +26,14 @@ from backend.llm import generate_answer
 from utils.helpers import make_collection_name
 
 app = FastAPI(title="AI PDF Knowledge Assistant")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class AskRequest(BaseModel):
